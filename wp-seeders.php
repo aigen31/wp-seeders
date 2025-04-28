@@ -17,6 +17,12 @@ use WPSeeders\Load;
 
 define('WP_SEEDERS_PATH', __DIR__);
 
+define('WP_SEEDERS_RUN_FILE', WP_CONTENT_DIR . '/wp-seeders/seeders.php');
+
+define('WP_SEEDERS_RUN_PATH', WP_CONTENT_DIR . '/wp-seeders');
+
+define('WP_SEEDERS_TEMPLATE_FILE', WP_SEEDERS_PATH . '/templates/seeders.php');
+
 if (! function_exists('wp_seeders_activate')) {
   function wp_seeders_activate()
   {

@@ -2,6 +2,7 @@
 
 namespace WPSeeders\Bootstrap;
 
+use Webmozart\Assert\Assert;
 use WPSeeders\Controllers\CLIController;
 use WPSeeders\Seeder;
 
@@ -14,8 +15,13 @@ class Commands
    */
   public static function seeders_run(): void
   {
-    require_once WP_CONTENT_DIR . '/wp-seeders/seeders.php';
+    Assert::fileExists(WP_SEEDERS_RUN_FILE, 'Seeder file does not exist. Please create it first.');
+
+    require_once WP_SEEDERS_RUN_FILE;
+
+    // Get the seeders from the file
     $seeders = Seeder::init();
+
     try {
       CLIController::run($seeders);
       CLIController::sendCLIMessage('success', 'Seeding completed successfully');
@@ -26,20 +32,21 @@ class Commands
 
   public static function create_seeder_file()
   {
-    $templateFile = WP_SEEDERS_PATH . '/templates/seeders.php';
-    $seederPath = WP_CONTENT_DIR . '/wp-seeders';
-    $seederFile = $seederPath . '/seeders.php';
-
-    if (!file_exists($seederFile)) {
-      if (file_exists($templateFile)) {
-        mkdir($seederPath, 0775, true);
-        copy($templateFile, $seederFile);
-        CLIController::sendCLIMessage('success', 'Seeder file created successfully from template');
-      } else {
-        CLIController::sendCLIMessage('error', 'Template file does not exist');
+    try {
+      if (!is_dir(WP_SEEDERS_RUN_PATH)) {
+        mkdir(WP_SEEDERS_RUN_PATH, 0775, true);
+        chmod(WP_SEEDERS_RUN_PATH, 0775);
       }
-    } else {
-      CLIController::sendCLIMessage('error', 'Seeder file already exists');
+
+      if (file_exists(WP_SEEDERS_RUN_FILE)) {
+        throw new \Exception('Seeder file already exists');
+      }
+
+      copy(WP_SEEDERS_TEMPLATE_FILE, WP_SEEDERS_RUN_FILE);
+      chmod(WP_SEEDERS_RUN_FILE, 0775);
+      CLIController::sendCLIMessage('success', 'Seeder file created successfully from template');
+    } catch (\Exception $e) {
+      CLIController::sendCLIMessage('error', $e->getMessage());
     }
   }
 }
