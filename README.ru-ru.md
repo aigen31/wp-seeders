@@ -1,6 +1,8 @@
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/aigen31/wp-seeders/blob/master/README.md)
 [![ru-ru](https://img.shields.io/badge/lang-ru--ru-green.svg)](https://github.com/aigen31/wp-seeders/blob/master/README.ru-ru.md)
 
+[![PHP Composer](https://github.com/aigen31/wp-seeders/actions/workflows/php.yml/badge.svg)](https://github.com/aigen31/wp-seeders/actions/workflows/php.yml)
+
 # WP Seeders
 
 **Tags:** wp-cli  
