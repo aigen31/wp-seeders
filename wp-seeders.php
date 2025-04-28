@@ -10,7 +10,7 @@ use WPSeeders\Load;
  * Author URI:      https://github.com/aigen31
  * Text Domain:     wp-seeders
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.1.1
  *
  * @package         wp_seeders
  */
