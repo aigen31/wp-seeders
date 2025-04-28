@@ -4,7 +4,7 @@ use WPSeeders\Load;
 
 /**
  * Plugin Name:     WP Seeders
- * Plugin URI:      https://github.com/aigen31
+ * Plugin URI:      https://github.com/aigen31/wp-seeders
  * Description:     Create terms in WordPress using WP CLI.
  * Author:          IntelliDev
  * Author URI:      https://github.com/aigen31
