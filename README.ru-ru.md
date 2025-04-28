@@ -3,8 +3,7 @@
 
 [![PHP Composer](https://github.com/aigen31/wp-seeders/actions/workflows/php.yml/badge.svg)](https://github.com/aigen31/wp-seeders/actions/workflows/php.yml)
 
-# WP Seeders
-
+# WP Seeders #
 **Tags:** wp-cli  
 **Requires at least:** 5.0  
 **Tested up to:** 6.8  
@@ -12,23 +11,27 @@
 **Stable tag:** 0.1.1
 **License:** MIT
 
-## Description
+## Description ##
 
 Create terms and taxonomies (in next releases) in WordPress using WP CLI
 
-## Available commands
+## Available commands ##
 
 Run seeding
-
 ```bash
-wp seeders
+wp seeders run
 ```
 
-## Installation
+Seeding init
+```bash
+wp seeders init
+```
+
+## Installation ##
 
 1. Upload `wp-seeders` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
-## Frequently Asked Questions
+## Frequently Asked Questions ##
 
 There is nothing

@@ -19,7 +19,12 @@ Create terms and taxonomies (in next releases) in WordPress using WP CLI
 
 Run seeding
 ```bash
-wp seeders
+wp seeders run
+```
+
+Seeding init
+```bash
+wp seeders init
 ```
 
 ## Installation ##
