@@ -7,5 +7,7 @@
           "WPSeeders\\": "includes/"
       }
   },
-  "require": {}
+  "require": {
+    "webmozart/assert": "^1.11"
+  }
 }
