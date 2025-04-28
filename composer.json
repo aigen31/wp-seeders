@@ -1,0 +1,11 @@
+{
+  "name": "aigen31/wp-seeders",
+  "description": "WordPress seeding plugin",
+  "type": "wordpress-plugin",
+  "autoload": {
+      "psr-4": {
+          "WPSeeders\\": "includes/"
+      }
+  },
+  "require": {}
+}
