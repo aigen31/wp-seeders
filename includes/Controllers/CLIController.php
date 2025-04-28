@@ -8,6 +8,7 @@ class CLIController
 {
   static public function run(array $seeders)
   {
+    $seeders = count($seeders) > 0 ? $seeders : null;
     if (empty($seeders)) {
       throw new \InvalidArgumentException('No seeders found.');
     }
