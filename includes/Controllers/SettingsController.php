@@ -4,15 +4,30 @@ namespace WPSeeders\Controllers;
 
 class SettingsController
 {
-    static public function getActiveStatus() {
+    /**
+     * Get the active status of the plugin
+     *
+     * @return bool
+     */
+    static public function getActiveStatus(): bool {
         return get_option('wp_seeders_active', false);
     }
 
-    static public function setActiveStatus($status) {
+    /**
+     * Set the active status of the plugin
+     *
+     * @return void
+     */
+    static public function setActiveStatus($status): void {
         update_option('wp_seeders_active', $status);
     }
 
-    static public function deleteActiveStatus() {
+    /**
+     * Delete the active option of the plugin
+     *
+     * @return void
+     */
+    static public function deleteActiveStatus(): void {
         delete_option('wp_seeders_active');
     }
 }

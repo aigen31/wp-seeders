@@ -7,7 +7,12 @@ use WPSeeders\Controllers\SettingsController;
 
 class Load
 {
-  static public function init()
+  /**
+   * Load the plugin
+   *
+   * @return void
+   */
+  static public function init(): void
   {
     if (SettingsController::getActiveStatus()) {
       CLI::init();

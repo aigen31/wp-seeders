@@ -6,8 +6,14 @@ use WPSeeders\Controllers\CLIController;
 
 class CLI
 {
-  public static function init()
+  /**
+   * Initialize the CLI commands
+   *
+   * @return void
+   */
+  public static function init(): void
   {
-    CLIController::addCommand('seeders', [Commands::class, 'seeders_run']);
+    CLIController::addCommand('seeders run', [Commands::class, 'seeders_run']);
+    CLIController::addCommand('seeders init', [Commands::class, 'create_seeder_file']);
   }
 }

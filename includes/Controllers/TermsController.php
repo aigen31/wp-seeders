@@ -2,15 +2,25 @@
 
 namespace WPSeeders\Controllers;
 
+use Webmozart\Assert\Assert;
+
 class TermsController
 {
-  static public function create(array $args)
+  /**
+   * Create terms in a given taxonomy.
+   *
+   * @param array $args {
+   *     Arguments for creating terms.
+   *
+   *     @type string $taxonomy The taxonomy to create terms in. Default is 'category'.
+   *     @type string $parent The parent term ID. Default is null.
+   *     @type array $terms An array of term names to create.
+   * }
+   */
+  static public function create(array $args): void
   {
-    if (empty($args['terms'])) {
-      throw new \InvalidArgumentException('No terms provided for seeding.');
-      CLIController::sendCLIMessage('error', 'No terms provided for seeding.');
-      return;
-    }
+    Assert::notEmpty($args, 'Arguments array cannot be empty.');
+    Assert::keyExists($args, 'terms', 'Terms key is required in arguments array.');
 
     $defaults = [
       'taxonomy' => 'category',
