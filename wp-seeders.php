@@ -15,6 +15,8 @@ use WPSeeders\Load;
  * @package         wp_seeders
  */
 
+define('WP_SEEDERS_PATH', __DIR__);
+
 if (! function_exists('wp_seeders_activate')) {
   function wp_seeders_activate()
   {
