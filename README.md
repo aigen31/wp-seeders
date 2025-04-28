@@ -1,3 +1,6 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/aigen31/wp-seeders/blob/master/README.md)
+[![ru-ru](https://img.shields.io/badge/lang-ru--ru-green.svg)](https://github.com/aigen31/wp-seeders/blob/master/README.ru-ru.md)
+
 # WP Seeders #
 **Tags:** wp-cli  
 **Requires at least:** 5.0  
