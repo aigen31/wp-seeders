@@ -13,25 +13,37 @@
 
 ## Description ##
 
-Create terms and taxonomies (in next releases) in WordPress using WP CLI
+Create terms in WordPress using WP CLI
 
 ## Available commands ##
 
-Run seeding
+Launching the Seeder Annihilator Cannon 3000
 ```bash
 wp seeders run
 ```
 
-Seeding init
+Pre-launching the Seeding Reactor
 ```bash
 wp seeders init
 ```
 
 ## Installation ##
 
-1. Upload `wp-seeders` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
+1. Installation manual lost during reactor meltdown. Proceed intuitively.
 
 ## Frequently Asked Questions ##
 
-There is nothing
+**Q: Why doesn't anything work?**
+A: Maybe you forgot to offer a sacrifice to the seeding cannon.
+
+**Q: What should I do if everything explodes?**
+A: Celebrate. It means the system is operational.
+
+**Q: Where is the proper documentation?**
+A: It was abducted by aliens for testing purposes.
+
+**Q: Can I cancel the seeding?**
+A: You can. But the consequences are unpredictable.
+
+**Q: Is this even legal?**
+A: No one has complained yet.
