@@ -50,3 +50,5 @@ wp seeders init
 
 **В: Это вообще законно?**  
 О: Пока никто не жаловался.
+
+![Preview](preview.jpg)

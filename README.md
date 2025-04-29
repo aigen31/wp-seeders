@@ -50,3 +50,5 @@ A: You can. But the consequences are unpredictable.
 
 **Q: Is this even legal?**  
 A: No one has complained yet.
+
+![Preview](preview.jpg)
